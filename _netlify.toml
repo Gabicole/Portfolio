@@ -1,9 +1,0 @@
-# _netlify.toml
-
-[build]
-  publish = "build"   # Remplace "build" par le dossier de ton site (dist, public, etc.)
-
-[[headers]]
-  for = "/*"
-  [headers.values]
-    Basic-Auth = "gabriel:secret123"

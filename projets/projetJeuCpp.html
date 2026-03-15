@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mes Projets</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+
+  <header>
+    <div class="header-content">
+    <img src="../img/general/portrait.png" alt="Photo de moi" class="profile-pic">
+    <div>
+    <h1>Gabriel DELPHA</h1>
+    <h2>Mes Projets</h2>
+    <nav>
+      <ul>
+        <li><a href="../index.html">Accueil</a></li>
+        <li><a href="../general/apropos.html">À propos</a></li>
+        <li><a href="../general/projets.html">Projets</a></li>
+        <li><a href="../general/contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="project-detail">
+      <div class="project-content">
+          <h2 class="TitreBody">Comparaison d'approche algorithmique</h2>
+      </div>
+      <div class="project-content">
+        <h3>En quoi consiste ce Projet ?</h3>
+        <p>
+          Ce projet est un <strong>jeu vidéo 2D</strong> se déroulant dans un niveau unique. Le joueur incarne un personnage qui doit parcourir la carte pour <strong>collecter toutes les pièces d’or</strong> disséminées dans la salle.
+        </p>
+
+        <p>
+          Mais la tâche n’est pas sans danger évidemment : plusieurs <strong>monstres</strong> patrouillent dans le niveau et se déplacent de manière autonome. Le joueur doit donc <strong>éviter ces ennemis</strong> à tout prix, car s’il se fait attraper, <strong>la partie est perdue</strong>.
+        </p>
+
+        <p>
+          L’objectif est simple : <strong>récupérer tous les bonus</strong> sans se faire capturer. Une fois toutes les pièces collectées, <strong>le joueur remporte la partie</strong>.
+        </p>
+
+        <p>
+          Ce projet met en œuvre les principes fondamentaux de la <strong>programmation orientée objet en C++</strong> notamment :
+        </p>
+
+        <ul>
+          <li>la gestion du personnage et des ennemis</li>
+          <li>le déplacement automatique et la détection de collisions</li>
+          <li>l’affichage graphique à l’aide de la bibliothèque SDL</li>
+        </ul>
+
+        <h3>Comment ça fonctionne ? </h3>
+        <div class="project-images">
+            <img src="../img/cpp/Jeu_cpp-2.png" alt="Sprite Sheet Personnages" class="project-img">
+            <img src="../img/cpp/Jeu_cpp-1.png" alt="Tile Set Décors" class="project-img">
+        </div>
+          <p>
+              J'ai eu la possibilité d'utiliser ces deux grilles principales pour la partie visuel du projet.
+          </p>
+        <p> 
+          La <strong>première grille</strong> contient les différents personnages que l’on peut utiliser, aussi bien pour le joueur que pour les ennemis.
+        </p>
+        <p> 
+          La <strong>deuxième grille</strong> m’a permis d’utiliser différents éléments de décor afin de créer la carte du niveau dans laquelle le joueur se déplace.
+        </p>
+        <p>
+          Grâce à cette grille, j’ai pu disposer les murs, les obstacles et les éléments interactifs pour construire un <strong>environnement de jeu</strong> à la fois varié et cohérent.
+        </p>
+          <div class="project-image-full">
+            <img src="../img/cpp/fond_cpp.png" alt="Représentation grille map">
+        </div>
+        <p>
+          Et voici ci-dessus la map représenté sous forme de quadrillage afin d’en faciliter la visualisation dans le code.
+        </p>
+        <p>
+          C’est sur cette grille que j’ai placé les obstacles, les murs et les différents éléments du niveau, ce qui m’a permis de structurer clairement l’espace de jeu et de gérer les déplacements et collision du joueur et des ennemis.
+        </p>
+          <div class="project-image-full">
+            <img src="../img/cpp/jeu_cpp.png" alt="Aperçu du jeu en action">
+          </div>
+        <p>
+          Voici à quoi ressemble la map avec les différents éléments.
+          Il y a quatres classes d'éléments distinctes :
+        </p>
+        <ul> 
+          <li>Le joueur</li>
+          <li>Les ennemis</li>
+          <li>Les objets</li>
+          <li>Les bonus (les pièces)</li>
+        </ul>
+        <h4>Démonstrations :</h4>
+        <p>
+          Le joueur gagne la partie une fois qu'il a ramassé toutes les pièces sans se faire toucher par un ennemi.
+        </p>
+        <video controls width="100%" class="presentation-video">
+          <source src="../img/video/video_cpp_gagne.mp4" type="video/mp4">
+          Votre navigateur ne supporte pas la vidéo HTML5.
+        </video>
+        <p>
+          Le joueur perd la partie une fois qu'il se fait toucher par un ennemi avant d'avoir récupéré toutes les pièces.
+        </p>
+        <video controls width="100%" class="presentation-video">
+          <source src="../img/video/video_cpp_perdu.mp4" type="video/mp4">
+          Votre navigateur ne supporte pas la vidéo HTML5.
+        </video>
+
+        <h3>Plus de détails sur le code à suivre...</h3>
+      
+</section>
+  <footer>
+    <p>&copy; 2025 Gabriel DELPHA. Tous droits réservés.</p>
+  </footer>
+
+</body>
+</html>

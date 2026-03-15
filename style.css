@@ -1,0 +1,248 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  color: #333333;
+  background-color: #FAF0E6;
+}
+
+/* === HEADER === */
+header {
+  background: #2B2E34;
+  padding: 2.5rem 1rem;
+  text-align: center;
+  box-shadow: 0 12px 35px rgba(0,0,0,0.45);
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.8rem;
+  color: #FFFFFF;    
+}
+
+header h2 {
+  font-size: 1.3rem;
+  margin-top: 0.5rem;
+  color: #C8C9C4;
+}
+
+/* === NAVIGATION === */
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+nav a {
+  color: #2B2E34;              
+  background-color: #FDFBF7;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+}
+
+nav a {
+  background-color: #8AAAE5;
+  color: #FFFFFF;
+  box-shadow: 0 10px 28px rgba(0,0,0,0.4);
+}
+
+/* === SECTIONS === */
+section {
+  padding: 2.5rem 1rem;
+  max-width: 900px;
+  margin: 2rem auto;
+  background-color: #FDFBF7;
+  border-radius: 14px;
+  box-shadow: 0 14px 40px rgba(0,0,0,0.35); /* ombre large et profonde */
+}
+
+/* === TITRES DE SECTION === */
+.TitreBody {
+  margin-top: 0;
+  color: #8AAAE5;
+  font-size: 2rem;
+}
+
+/* === PROJETS === */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.project-card {
+  background: #FFFFFF;
+  padding: 1.2rem;
+  border: 2px solid #E5E5E5;
+  border-radius: 12px;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25); /* ombre puissante */
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  border-color: #8AAAE5;
+  box-shadow: 0 16px 50px rgba(0,0,0,0.5); /* effet d'élévation marqué */
+}
+
+/* === FOOTER === */
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  background: #2B2E34;
+  color: white;
+  font-size: 0.9rem;
+  border-top: 4px solid #2B2E34;
+  box-shadow: 0 -12px 35px rgba(0,0,0,0.45);
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+}
+
+/* === BOUTONS === */
+.btn {
+  display: inline-block;
+  background-color: #8AAAE5;
+  color: #FFFFFF;
+  padding: 0.8rem 1.5rem;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+}
+
+.btn:hover {
+  background-color: #7B9ADF;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.45);
+}
+
+/* === HEADER CONTENT === */
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.profile-pic {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid white;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+/* === VIDEO === */
+.presentation-video {
+  max-width: 700px;
+  margin: 1.5rem auto;
+  display: block;
+  border-radius: 12px;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.35);
+}
+
+/* === IMAGES DES PROJETS === */
+.project-img {
+  width: 100%;
+  height: 175px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+}
+
+/* === PAGE PROJETS DETAIL === */
+.project-detail {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.35);
+}
+
+/* === CORRECTION ALIGNEMENT IMAGES === */
+
+.project-images {
+  display: flex;              
+  justify-content: center;    
+  gap: 1rem;                  
+  margin-bottom: 1.5rem;
+}
+
+/* On cible spécifiquement les images à l'intérieur de ce bloc */
+.project-images img {
+  width: 50%;                 
+  height: auto;               
+  max-height: 400px;          
+  object-fit: contain;        
+  margin-bottom: 0;           
+  
+  /* On garde le style visuel (bordure, ombre) */
+  border-radius: 8px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+}
+
+/* Optionnel : Responsive pour mobile */
+@media (max-width: 600px) {
+  .project-images {
+    flex-direction: column; 
+  }
+  .project-images img {
+    width: 100%;
+  }
+}
+
+
+/* === RESPONSIVE === */
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* === STYLE POUR UNE IMAGE SEULE ET CENTRÉE === */
+.project-image-full {
+  display: flex;              /* Utilise Flexbox */
+  justify-content: center;    /* Centre l'image horizontalement */
+  margin: 2rem 0;             /* Espace en haut et en bas */
+}
+
+.project-image-full img {
+  width: 100%;                /* Prend toute la largeur disponible... */
+  max-width: 350px;           /* ...mais s'arrête à 750px pour ne pas être trop géant */
+  height: auto;               /* Garde les proportions */
+  
+  border-radius: 8px;         /* Arrondit les coins */
+  box-shadow: 0 8px 25px rgba(0,0,0,0.25); /* Ombre portée */
+  
+  image-rendering: pixelated; /* Reste net pour le pixel art */
+}
+
+.see-more {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+  a.btn2 {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}

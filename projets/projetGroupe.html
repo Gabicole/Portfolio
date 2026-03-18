@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Mes Projets</title>
+  <title>Mes Projets - Création de groupes de TD/TP</title>
   <link rel="stylesheet" href="../style.css" />
 </head>
 <body>
@@ -22,22 +22,123 @@
         <li><a href="../general/contact.html">Contact</a></li>
       </ul>
     </nav>
+    </div>
+    </div>
   </header>
 
-  <section>
+  <section class="project-detail">
+      <h2 class="TitreBody">Création de groupes de TD et de TP : Développement d'un site et d'une application</h2>
+    
     <div class="project-content">
-      <h2 class="TitreBody">création de groupes de TD et de TPdeveloppement d'un site et une application</h2>
-    </div>
+      <h3>En quoi consiste ce Projet ?</h3>
+      <p>
+        Ce projet vise à concevoir et développer une plateforme (comprenant un site web et une application bureautique ou mobile) pour assister à la création de groupes d'étudiants pour les travaux dirigés (TD) et travaux pratiques (TP). Il répond au problème récurrent et chronophage de la répartition manuelle des étudiants, qui est particulièrement complexe pour les grandes promotions soumises à de multiples contraintes.
+      </p>
+      
+      <p>
+        Il s'agit d'un <strong>projet long</strong> réalisé en <strong>groupe de trois personnes</strong>. Il se divise en plusieurs parties bien distinctes couvrant l'ensemble du cycle de développement : Algorithmique, Analyse, Base de données, Conception Orientée Objet (COO) et Web.
+      </p>
 
-    <div class="project-images">
-      <div class="full-image">
-        <img src="../img/groupe/Groupe-1.png" alt="Projet groupe image 1">
-        <img src="../img/groupe/Groupe.jpg" alt="Projet groupe image 2">
+      <h4>Fonctionnalités et gestion des contraintes</h4>
+      <p>
+        Le système doit permettre de répartir les étudiants en respectant divers critères pédagogiques et pratiques :
+      </p>
+      <ul>
+        <li><strong>Homogénéisation des groupes</strong> en fonction du niveau académique (en utilisant les moyennes et écart-types).</li>
+        <li><strong>Équilibrage</strong> selon le genre, le type de baccalauréat, le statut (redoublants, apprentis).</li>
+        <li><strong>Prise en compte des affinités et de la logistique</strong>, comme le covoiturage, le choix de la langue d'enseignement ou les options.</li>
+        <li><strong>Création de sondages</strong> pour recueillir les choix et préférences des étudiants.</li>
+        <li><strong>Importation des notes</strong> des étudiants via des fichiers CSV pour alimenter les critères de sélection.</li>
+        <li><strong>Génération des groupes</strong> de manière automatisée (via un algorithme respectant les règles fixées) ou manuelle (en sélectionnant les étudiants un par un).</li>
+      </ul>
+      <p><em>Rôles et permissions des utilisateurs / Exigences techniques définies dans le cahier des charges.</em></p>
+
+      <div class="project-images">
+        <div class="full-image">
+          <img src="../img/groupe/Groupe-1.png" alt="Aperçu du projet - Interface 1">
+          <img src="../img/groupe/Groupe.jpg" alt="Aperçu du projet - Interface 2">
+        </div>
       </div>
-    </div>
 
-    <div class="project-content">
-      <p>Analyse/Base de donnees + Création d'un site Web HTML / CSS / PHP </p>
+      <h3>1. Partie ANALYSE</h3>
+      <p>
+        En tant que maître d'œuvre sur ce projet, mon rôle lors de cette phase a été de m'assurer que les besoins du client (la maîtrise d'ouvrage) soient parfaitement traduits techniquement. En m'appuyant sur le travail de notre groupe, j'ai eu la charge de réaliser les tâches suivantes :
+      </p>
+      <ul>
+        <li><strong>L'analyse fonctionnelle :</strong> J'ai défini et structuré l'ensemble des fonctionnalités requises pour garantir que l'application et le site web répondent aux attentes demandées.</li>
+        <li><strong>La conception de la base de données :</strong> J'ai élaboré le modèle de données. C'était un enjeu majeur, car la qualité de cette modélisation conditionne directement la fiabilité et la robustesse de la base de données finale.</li>
+        <li><strong>La gestion des événements :</strong> J'ai également pris en charge la conception des événements destinés à être traités et gérés directement du côté de la base de données.</li>
+      </ul>
+      <h4>Livrables réalisés :</h4>
+      <ul>
+        <li><strong>Analyse Fonctionnelle :</strong> Diagramme de cas d'utilisation, maquettes non fonctionnelles pour le WEB, diagramme de navigation.</li>
+        <li><strong>Modélisation :</strong> Dictionnaire de données, diagramme de dépendances fonctionnelles, MCD (Modèle Conceptuel de Données), MCT (Modèle Conceptuel de Traitements).</li>
+      </ul>
+
+      <h3>2. Partie ALGO (Algorithmique)</h3>
+      <p>
+        Pour cette partie du projet, mon rôle s'est concentré sur le cœur logique de l'application : le développement en Java du moteur de répartition automatisée des étudiants. J'ai eu la charge de réaliser les tâches suivantes :
+      </p>
+      <ul>
+        <li><strong>Définition d'un scénario de répartition personnalisé :</strong> J'ai conçu mon propre mode de création de groupes basé sur un cas d'usage réaliste. Cela impliquait d'établir des contraintes strictes à respecter obligatoirement (comme la taille des groupes, les quotas de genre ou les demandes de covoiturage) et d'élaborer une fonction de "score" globale à optimiser (visant par exemple à lisser les moyennes académiques ou à équilibrer les profils spécifiques entre les groupes).</li>
+        <li><strong>Conception et développement des algorithmes :</strong> Pour résoudre ce problème d'optimisation propre à mon scénario, j'ai programmé personnellement trois algorithmes distincts.</li>
+        <li><strong>Intégration avec l'application :</strong> Je me suis assuré que mon code s'intègre parfaitement avec l'application réalisée dans le volet « Qualité de développement ». Mes algorithmes devaient pouvoir être appelés directement depuis l'interface utilisateur en prenant en compte les paramètres saisis, puis renvoyer les groupes constitués pour qu'ils soient affichés à l'écran.</li>
+      </ul>
+      <h4>Livrables réalisés :</h4>
+      <ul>
+        <li>Deux algorithmes gloutons.</li>
+        <li>Un algorithme force brute (Quête annexe au projet).</li>
+      </ul>
+
+      <h3>3. Partie BD (Base de Données)</h3>
+      <p>
+        Pour cette étape cruciale du projet, mon rôle a été de concrétiser le travail d'analyse en implémentant techniquement la base de données, tout en m'assurant de sa robustesse et de sa cohérence avec les fonctionnalités attendues. J'ai eu la charge de réaliser les tâches suivantes :
+      </p>
+      <ul>
+        <li><strong>Conception relationnelle et création (Aspect statique) :</strong> J'ai traduit le Modèle Entité-Association en un Modèle Relationnel détaillé, en justifiant mes choix d'implémentation et d'optimisation. J'ai ensuite conçu les scripts SQL de création des tables (en m'aidant d'outils de modélisation pour garantir une génération propre) afin de m'assurer qu'aucune table ne soit créée manuellement.</li>
+        <li><strong>Génération du jeu d'essai et requêtage :</strong> J'ai élaboré un script de population pour insérer automatiquement des dizaines de données de test réalistes dans chaque table. À partir de là, j'ai rédigé les requêtes et les vues SQL correspondant aux maquettes de l'application, ce qui m'a permis de tester et de valider l'absence d'erreurs dans mon modèle de données.</li>
+        <li><strong>Programmation dynamique (PL/SQL) :</strong> Pour gérer les règles métier complexes directement côté serveur, j'ai implémenté des triggers (déclencheurs) et leurs fonctions PL/SQL associées. Cela permet d'automatiser certains traitements lors de la modification des données.</li>
+        <li><strong>Livraison et documentation :</strong> J'ai préparé le livrable final en regroupant l'ensemble des scripts et des requêtes dans une archive fonctionnelle incluant un fichier README.</li>
+      </ul>
+      <h4>Livrables réalisés (Création de la base de données) :</h4>
+      <ul>
+        <li>Modèle relationnel.</li>
+        <li>Script de création des tables et script d'insertion de données.</li>
+        <li>Scripts de création de triggers, de vues, de fonctions, de procédures, et de requêtes types utiles au projet.</li>
+      </ul>
+
+      <h3>4. Partie COO (Conception Orientée Objet)</h3>
+      <p>
+        Pour ce volet du projet, mon rôle a été de concevoir et de développer l'application cliente en Java (la partie non-web). Cette application constitue l'interface permettant aux utilisateurs finaux d'interagir avec le système, et tout particulièrement d'exécuter, tester et évaluer les résultats de nos algorithmes de répartition.
+      </p>
+      <ul>
+        <li><strong>Modélisation objet (UML) :</strong> J'ai conçu l'architecture logicielle de l'application en réalisant un diagramme de classes UML, en me concentrant strictement sur les objets et les données nécessaires au bon fonctionnement de cette interface.</li>
+        <li><strong>Maquettage et conception des échanges de données :</strong> J'ai élaboré les maquettes des différents écrans de l'application. Pour chaque vue, j'ai défini les requêtes HTTP (API REST) nécessaires pour communiquer avec le serveur web, et j'ai structuré les réponses attendues au format JSON.</li>
+        <li><strong>Implémentation logicielle et connexion au serveur :</strong> J'ai développé l'application Java complète. Le défi majeur était de la connecter efficacement à la base de données via l'API REST (développée en parallèle sur la partie web) pour que l'utilisateur puisse consulter et mettre à jour les informations en temps réel.</li>
+        <li><strong>Conception de l'infrastructure globale :</strong> J'ai réalisé un diagramme de déploiement cartographiant l'ensemble de l'architecture matérielle et logicielle du projet. Ce schéma illustre les machines utilisées, leurs protocoles de communication, ainsi que les librairies et livrables déployés sur chaque nœud.</li>
+      </ul>
+      <h4>Livrables réalisés :</h4>
+      <ul>
+        <li>Diagramme de classes et Diagramme de Déploiement.</li>
+        <li>Maquettes non fonctionnelles de l'application JAVA.</li>
+        <li>Application JAVA communicant avec l'API REST qui utilise la base de données.</li>
+      </ul>
+
+      <h3>5. Partie WEB</h3>
+      <p>
+        Pour ce volet du projet, mon rôle a consisté à donner vie aux maquettes et à l'architecture de données en développant l'interface web complète et les services de communication côté serveur.
+      </p>
+      <ul>
+        <li><strong>Design et intégration (Charte graphique & Responsive) :</strong> J'ai défini l'identité visuelle de la plateforme en créant une charte graphique sur mesure. J'ai ensuite développé les feuilles de style (CSS) pour implémenter ce design et garantir une navigation fluide et responsive sur tous les écrans.</li>
+        <li><strong>Développement Front-End (PHP) :</strong> J'ai entièrement programmé le site web en PHP. Cette interface, directement connectée à la base de données, permet aux différents acteurs (étudiants, enseignants, responsables) d'accéder à toutes les fonctionnalités décrites dans le cahier des charges via un environnement ergonomique.</li>
+        <li><strong>Création de l'API REST (Backend) :</strong> En parallèle du site frontal, j'ai développé en PHP les services web (API REST). C'est cette brique technique cruciale qui permet à l'application cliente Java d'interagir avec le serveur et de manipuler les données de la base en temps réel.</li>
+        <li><strong>Livraison et documentation :</strong> Pour clôturer le projet et préparer la soutenance, j'ai compilé l'ensemble des livrables : le code source, la documentation technique et les scripts de déploiement.</li>
+      </ul>
+      <h4>Livrable réalisé :</h4>
+      <ul>
+        <li>Site web complet en PHP utilisant la base de données.</li>
+      </ul>
+
     </div>
   </section>
 

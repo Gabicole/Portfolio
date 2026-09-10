@@ -235,6 +235,26 @@ footer {
   image-rendering: pixelated; /* Reste net pour le pixel art */
 }
 
+/* === STYLE POUR UNE IMAGE SEULE ET CENTRÉE === */
+.project-image-full-2 {
+  display: flex;              /* Utilise Flexbox */
+  justify-content: center;    /* Centre l'image horizontalement */
+  margin: 2rem 0;             /* Espace en haut et en bas */
+}
+
+.project-image-full-2 img {
+  width: 100%;                /* Prend toute la largeur disponible... */
+  max-width: 750px;           /* ...mais s'arrête à 750px pour ne pas être trop géant */
+  height: auto;               /* Garde les proportions */
+  
+  border-radius: 8px;         /* Arrondit les coins */
+  box-shadow: 0 8px 25px rgba(0,0,0,0.25); /* Ombre portée */
+  
+  image-rendering: pixelated; /* Reste net pour le pixel art */
+}
+
+
+
 .see-more {
   text-align: center;
   margin-top: 2rem;

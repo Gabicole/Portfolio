@@ -94,27 +94,23 @@
         <li><strong>Communication :</strong> Un serveur <strong>Discord</strong> dédié au brainstorming, et un <strong>Google Doc</strong> pour le suivi dynamique des tâches (À faire, En cours, Terminé).</li>
       </ul>
 
-      <h3>Organisation et Planification</h3>
-      <p>
-        Pour garantir le respect des délais, nous avons structuré le développement du jeu :
-      </p>
-      <ul>
-        <li><strong>Liste des tâches :</strong> <em>(À compléter avec les tâches et temps estimés)</em></li>
-        <li><strong>Diagramme de PERT :</strong> <em>(À insérer ou lier ici pour visualiser le chemin critique du projet)</em></li>
-      </ul>
-
-      <hr style="margin: 40px 0; border: 0; border-top: 1px solid #ccc;">
-
-      <div style="background-color: #f9f9f9; padding: 20px; border-left: 4px solid #333; margin-top: 20px;">
-        <h3>En cours de développement...</h3>
-        <p><em>Le projet étant actuellement en cours de réalisation, les sections suivantes seront documentées ultérieurement :</em></p>
-        <ul style="margin-bottom: 0;">
-          <li><strong>Réalisation et implémentations du jeu vidéo</strong> (Défis techniques sur le multijoueur local, solutions apportées, gestion des sockets pour les téléphones).</li>
-          <li><strong>Manuel d'utilisation et d'installation</strong> (Comment lancer le serveur local et comment les joueurs s'y connectent).</li>
-        </ul>
+      <h3>Déroulement de la partie et démonstrations</h3>
+      
+      <p>Tout commence par la création de la session par l'hôte, qui génère et affiche un QR code sur l'écran principal.</p>
+      <div class="project-image-full-2">
+        <img src="../img/JeuAmphi/lobby.png" alt="Écran de l'hôte affichant le QR code de la partie">
       </div>
-
+      <p>En scannant ce QR code avec leur smartphone, les joueurs accèdent directement à l'interface de connexion pour y saisir le code de la partie et leur pseudo. Ils intègrent ensuite un salon d'attente interactif, équipé d'un chat de discussion, le temps que tout le monde rejoigne la session et que l'hôte lance la première manche.</p>
+      
+      <div class="project-image-full-2">
+        <img src="../img/JeuAmphi/lobby_user.jpg" alt="Interface de saisie du code et du pseudo sur mobile">
+      </div>
+      <p>Une fois la manche lancée, l'arène se dévoile sur l'écran géant avec un compte à rebours, les joueurs sains et le premier infecté. La tension monte immédiatement : l'objectif est de survivre jusqu'à la fin du temps imparti en esquivant tout contact avec les infectés.</p>
+      
+      <img src="[TA VIDÉO/GIF : début d'une partie avec les joueurs qui bougent]" alt="Démonstration du début d'une partie avec les joueurs en mouvement">
     </div>
+
+        <h3>Plus de détails sur le code à suivre...</h3>
   </section>
 
   <footer>
